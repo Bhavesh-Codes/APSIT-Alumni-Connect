@@ -1,0 +1,172 @@
+/* src/pages/HomePage.css */
+
+.dashboard-page-new {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem; /* <-- This padding is correct and necessary */
+  font-family: Arial, sans-serif;
+  /* background-color: #f7f9fc; <-- This is now handled by App.css */
+}
+
+/* --- 1. Hero Welcome Section --- */
+.dashboard-hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  margin-bottom: 3rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+}
+
+.hero-title {
+  margin: 0;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.hero-name {
+  color: #ffd700;
+  display: inline-block;
+}
+
+.hero-subtitle {
+  margin: 0.5rem 0 0;
+  color: #e0e0e0;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+/* --- 2. Feature Cards Section --- */
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #eee;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.feature-card p {
+  margin: 0;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* --- 3. Success Stories Carousel --- */
+.success-stories {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 3rem;
+}
+
+.success-stories h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.testimonial-card {
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.testimonial-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  object-fit: cover;
+}
+
+.testimonial-card blockquote {
+  font-size: 1.15rem;
+  font-style: italic;
+  color: #444;
+  margin: 0 0 1rem;
+  line-height: 1.6;
+}
+
+.testimonial-card h4 {
+  margin: 0 0 0.25rem;
+  color: #007bff;
+  font-size: 1.1rem;
+}
+
+.testimonial-card p {
+  margin: 0;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* --- 4. Company Logos --- */
+.company-logos {
+  text-align: center;
+}
+
+.company-logos h2 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo-card {
+  flex-basis: 120px;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-card img {
+  max-width: 100px;
+  max-height: 40px;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s;
+}
+
+.logo-card:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}

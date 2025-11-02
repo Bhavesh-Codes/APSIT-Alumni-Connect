@@ -1,0 +1,113 @@
+/* src/components/Sidebar.css */
+
+.sidebar {
+  width: 260px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  box-sizing: border-box; /* Include padding in the width */
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 1rem;
+}
+
+.sidebar-header a {
+  display: block;
+}
+
+.sidebar-logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+
+.sidebar-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.sidebar-links {
+  flex-grow: 1; /* Pushes footer down */
+  overflow-y: auto;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between icon and text */
+  padding: 0.85rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar-link:hover {
+  background-color: #f4f4f4;
+  color: #007bff;
+}
+
+/* This is the magic of NavLink */
+.sidebar-link.active {
+  background-color: #e6f2ff;
+  color: #007bff;
+  font-weight: 600;
+}
+
+.sidebar-link svg {
+  font-size: 1.25rem;
+  width: 24px; /* Fix icon width */
+  text-align: center;
+}
+
+/* Special links for "Post Job" etc. */
+.sidebar-link.special {
+  color: #007bff;
+  border: 1px solid #e6f2ff;
+  background-color: #e6f2ff;
+}
+
+.sidebar-link.special:hover {
+  background-color: #007bff;
+  color: #ffffff;
+  border-color: #007bff;
+}
+
+.sidebar-link.special.active {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.sidebar-footer {
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.sidebar-link.logout {
+  width: 100%;
+  background-color: #fef0f0;
+  color: #dc3545;
+  border: 1px solid #fdeeee;
+}
+
+.sidebar-link.logout:hover {
+  background-color: #dc3545;
+  color: #ffffff;
+}

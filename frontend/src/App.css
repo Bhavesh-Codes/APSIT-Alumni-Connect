@@ -1,0 +1,46 @@
+/* src/App.css */
+
+/* We remove 'display: flex' from the layout.
+  Since the Sidebar is 'position: fixed', we don't need it.
+*/
+.app-layout {
+  background-color: #f7f9fc; /* Light gray background for content */
+  min-height: 100vh;
+}
+
+.app-content-area {
+  /* This is the FIX:
+    1. We *only* set the margin-left to be the width of our sidebar.
+    2. We remove 'flex-grow: 1'.
+    This creates a content block that takes up the rest of the window.
+  */
+  margin-left: 260px; 
+  box-sizing: border-box;
+}
+
+/* This animation and the page styles below are still correct.
+  The individual pages will control their own padding and max-width.
+*/
+.profile-page-new,
+.dashboard-page-new,
+.network-page,
+.connections-page,
+.job-board-page,
+.events-page,
+.form-page,
+.admin-dashboard,
+.admin-verification-page,
+.admin-user-page {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

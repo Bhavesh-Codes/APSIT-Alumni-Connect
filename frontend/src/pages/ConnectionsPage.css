@@ -1,0 +1,117 @@
+/* src/pages/ConnectionsPage.css */
+/* We will re-use the .view-toggle styles from LoginPage.css */
+/* We also re-use .profile-page-new and .profile-card from ProfilePage.css */
+
+.connections-message {
+  text-align: center;
+  color: #007bff;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.connections-list-new,
+.requests-list-new {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.connection-card-new,
+.request-card-new {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+.connection-card-new:last-child,
+.request-card-new:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.connection-card-new:first-child,
+.request-card-new:first-child {
+  padding-top: 0;
+}
+
+.connection-img-new {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #f0f0f0;
+}
+
+.connection-info-new,
+.request-info-new {
+  flex-grow: 1;
+}
+
+.connection-name-new,
+.request-name-new {
+  margin: 0 0 0.25rem;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.connection-title-new,
+.request-title-new {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.connection-branch-new {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.connection-actions-new,
+.request-actions-new {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.connection-button-new,
+.request-button-new {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.connection-button-new.remove {
+  background-color: #fdeeee;
+  color: #dc3545;
+  border: 1px solid #fbcaca;
+}
+.connection-button-new.remove:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+.request-button-new.accept {
+  background-color: #e9f5ec;
+  color: #28a745;
+  border: 1px solid #bce3c5;
+}
+.request-button-new.accept:hover {
+  background-color: #28a745;
+  color: white;
+}
+
+.request-button-new.reject {
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #ddd;
+}
+.request-button-new.reject:hover {
+  background-color: #e0e0e0;
+}

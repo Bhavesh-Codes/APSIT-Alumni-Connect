@@ -1,0 +1,98 @@
+/* src/pages/AdminVerificationPage.css */
+
+.admin-verification-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.admin-verification-page h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.verification-message {
+  text-align: center;
+  color: #007bff;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.verification-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.verification-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  border: 1px solid #eee;
+}
+
+.verification-info {
+  flex-grow: 1;
+}
+
+.verification-info h3 {
+  margin: 0 0 0.5rem;
+  color: #333;
+}
+
+.verification-info p {
+  margin: 0.25rem 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.document-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-weight: 600;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.document-link:hover {
+  text-decoration: underline;
+}
+
+.verification-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.verification-button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  min-width: 100px;
+}
+
+.verification-button.approve {
+  background-color: #28a745;
+  color: white;
+}
+.verification-button.approve:hover {
+  background-color: #218838;
+}
+
+.verification-button.reject {
+  background-color: #dc3545;
+  color: white;
+}
+.verification-button.reject:hover {
+  background-color: #c82333;
+}

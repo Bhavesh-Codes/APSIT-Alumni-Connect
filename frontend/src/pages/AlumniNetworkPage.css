@@ -1,0 +1,184 @@
+/* src/pages/AlumniNetworkPage.css */
+
+.network-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem; 
+  font-family: Arial, sans-serif;
+}
+
+.network-page h2 {
+  text-align: left;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.network-message {
+  text-align: center;
+  color: #007bff;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.search-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.search-input, .search-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* --- THIS IS THE FIX (4 CARDS) --- */
+.user-grid {
+  display: grid;
+  /* Reduced minmax from 280px to 250px to fit 4 cards */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+  gap: 2rem;
+}
+
+.user-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- REMOVED BORDER-TOP --- */
+.user-card.alumni {
+  /* No more border */
+}
+.user-card.student {
+  /* No more border */
+}
+
+/* --- RE-ADDED BADGE STYLES --- */
+.user-card-role-badge {
+  position: absolute;
+  top: 1rem;
+  right: -30px; /* Start off-screen */
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35rem 1rem;
+  color: white;
+  transform: rotate(45deg); /* Rotate the badge */
+  width: 120px; /* Give it a fixed width */
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* --- NEW COLORS --- */
+.user-card.alumni .user-card-role-badge {
+  background-color: #fd7e14; /* New Distinct Orange */
+}
+
+.user-card.student .user-card-role-badge {
+  background-color: #007bff; /* Primary Blue */
+}
+/* --- END OF FIX --- */
+
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.user-card-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 2rem auto 1rem;
+  background-color: #f0f0f0;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.user-card-name {
+  margin: 0.5rem 0 0.25rem;
+  color: #333;
+  font-size: 1.25rem;
+}
+
+.user-card-branch {
+  margin: 0;
+  color: #555; /* Toned down the branch color */
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.user-card-title {
+  margin: 0.25rem 0;
+  color: #555;
+  font-size: 1rem;
+  padding: 0 1rem;
+}
+
+.user-card-company {
+  margin: 0.25rem 0 1.5rem;
+  color: #777;
+  font-size: 0.9rem;
+  padding: 0 1rem;
+}
+
+/* Button styles are unchanged */
+.user-card-button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-top: 1px solid #f0f0f0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  margin-top: auto;
+}
+.user-card-button.connect {
+  background-color: transparent;
+  color: #007bff;
+}
+.user-card-button.connect:hover {
+  background-color: #e6f2ff;
+}
+.user-card-button.pending {
+  background-color: transparent;
+  color: #ffc107;
+}
+.user-card-button.pending:hover {
+  background-color: #fff8e1;
+}
+.user-card-button.received {
+  background-color: transparent;
+  color: #28a745;
+}
+.user-card-button.received:hover {
+  background-color: #eaf8ee;
+}
+.user-card-button.connected {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  cursor: not-allowed;
+}

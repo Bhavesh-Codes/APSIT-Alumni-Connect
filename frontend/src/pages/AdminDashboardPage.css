@@ -1,0 +1,62 @@
+/* src/pages/AdminDashboardPage.css */
+/* We re-use .profile-page-new, .profile-card, etc. from other files */
+
+.admin-dashboard h2 {
+  text-align: left;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid #eee;
+}
+
+.stat-card h3 {
+  margin: 0 0 0.5rem;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.stat-card p {
+  margin: 0 0 0.5rem;
+  color: #007bff;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.stat-card span {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* --- NEW CHART STYLES --- */
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.chart-container {
+  /* This ensures the chart has space */
+  padding-top: 1rem;
+}
+
+/* This fixes a known Recharts text bug */
+.recharts-wrapper .recharts-text {
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+}
